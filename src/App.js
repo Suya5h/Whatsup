@@ -1,7 +1,11 @@
+import LOGIN from "./Pages/Login";
 import Register from "./Pages/Register";
-import "./style.css";
+import "./style.scss";
 function App() {
-  return <Register />;
+  return (
+    //<Register />;
+    <LOGIN />
+  );
 }
 
 export default App;
