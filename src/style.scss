@@ -153,10 +153,42 @@
           border-radius: 50%;
           object-fit: cover;
         }
+
+        .userCharInfo {
+          span {
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 12px;
+            color: lightgray;
+          }
+        }
       }
     }
     .Chat {
       flex: 2;
+
+      .ChatInfo {
+        height: 50px;
+        background-color: #5d5b8d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        color: lightgray;
+      }
+
+      .ChatIcons {
+        display: flex;
+        gap: 10px;
+
+        img {
+          height: 25px;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

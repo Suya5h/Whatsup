@@ -8,6 +8,21 @@ const Chats = () => {
         <img src={Suyash} alt="" />
         <div className="userCharInfo">
           <span>Suyash</span>
+          <p>Hello</p>
+        </div>
+      </div>
+      <div className="userChat">
+        <img src={Suyash} alt="" />
+        <div className="userCharInfo">
+          <span>Suyash</span>
+          <p>Hello</p>
+        </div>
+      </div>
+      <div className="userChat">
+        <img src={Suyash} alt="" />
+        <div className="userCharInfo">
+          <span>Suyash</span>
+          <p>Hello</p>
         </div>
       </div>
     </div>
