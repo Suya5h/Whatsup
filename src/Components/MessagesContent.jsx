@@ -1,11 +1,9 @@
 import React from "react";
 import Message from "./Message";
 
-const MessagesContent = () => {
+const messages = () => {
   return (
-    <div className="MessagesContent">
-      <Message />
-      <Message />
+    <div className="messages">
       <Message />
       <Message />
       <Message />
@@ -17,4 +15,4 @@ const MessagesContent = () => {
   );
 };
 
-export default MessagesContent;
+export default messages;
