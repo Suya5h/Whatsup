@@ -193,6 +193,13 @@
       .MessagesContent {
         background-color: #ddddf7;
         padding: 10px;
+        height: calc(100% - 160px);
+      }
+
+      .Input {
+        background-color: white;
+        height: 50px;
+        padding: 10px;
       }
     }
   }
