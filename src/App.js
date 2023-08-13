@@ -4,7 +4,8 @@ import "./style.scss";
 import Home from "./Pages/Home";
 function App() {
   return (
-    <Home />
+    // <Home />
+    <Register />
     //<LOGIN />
   );
 }
