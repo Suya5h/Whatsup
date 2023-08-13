@@ -105,6 +105,7 @@
     .SideBar {
       flex: 1;
       background-color: #3e3c61;
+      position: relative;
 
       .NavBar {
         display: flex;
@@ -139,6 +140,11 @@
             color: #ddddf7;
             border: none;
             cursor: pointer;
+            @include tablet {
+              position: absolute;
+              bottom: 20px;
+              left: 15px;
+            }
           }
         }
       }
