@@ -9,7 +9,7 @@ const Chat = () => {
   return (
     <div className="Chat">
       <div className="ChatInfo">
-        <span>Friend</span>
+        <span>Suyash</span>
         <div className="ChatIcons">
           <img src={cam} alt="" />
           <img src={add} alt="" />
