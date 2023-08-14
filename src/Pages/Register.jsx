@@ -5,12 +5,15 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { auth, db, Storage } from "../firebase";
+import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [err, setErr] = useState(false);
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const displayName = e.target[0].value;
@@ -25,7 +28,9 @@ const Register = () => {
 
       const uploadTask = uploadBytesResumable(storageRef, file);
       uploadTask.on(
-        (error) => {
+        (uploadError) => {
+          // Define the error variable correctly
+          console.error("Error uploading file:", uploadError);
           setErr(true);
         },
         () => {
@@ -40,10 +45,13 @@ const Register = () => {
               email,
               photoURL: downloadURL,
             });
+            await setDoc(doc(db, "userchats", res.user.uid), {});
+            navigate("/");
           });
         }
       );
     } catch (err) {
+      console.error("Error creating user:", err);
       setErr(true);
     }
   };
