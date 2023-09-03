@@ -53,7 +53,7 @@ const Search = () => {
         await setDoc(doc(db, "chats", combinedId), { messages: [] });
 
         //create user chats
-        await updateDoc(doc(db, "userchats", currentUser.uid), {
+        await updateDoc(doc(db, "userChats", currentUser.uid), {
           [combinedId + ".userInfo"]: {
             uid: user.uid,
             displayName: user.displayName,
@@ -62,7 +62,7 @@ const Search = () => {
           [combinedId + ".date"]: serverTimestamp(),
         });
 
-        await updateDoc(doc(db, "userchats", user.uid), {
+        await updateDoc(doc(db, "userChats", user.uid), {
           [combinedId + ".userInfo"]: {
             uid: currentUser.uid,
             displayName: currentUser.displayName,
@@ -89,9 +89,9 @@ const Search = () => {
       </div>
       {err && <span>User not found!</span>}
       {user && (
-        <div className="userchats" onClick={handleSelect}>
+        <div className="userChat" onClick={handleSelect}>
           <img src={user.photoURL} alt="" />
-          <div className="userchatsInfo">
+          <div className="userChatInfo">
             <span>{user.displayName}</span>
           </div>
         </div>
