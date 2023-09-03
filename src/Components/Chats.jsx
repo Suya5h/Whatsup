@@ -1,26 +1,26 @@
 import React from "react";
 import Suyash from "../Images/Suyash.jpg";
 
-const Chats = () => {
+const chats = () => {
   return (
-    <div className="Chats">
-      <div className="userChat">
+    <div className="chats">
+      <div className="userchats">
         <img src={Suyash} alt="" />
-        <div className="userCharInfo">
+        <div className="userchatsInfo">
           <span>Suyash</span>
           <p>Hello</p>
         </div>
       </div>
-      <div className="userChat">
+      <div className="userchats">
         <img src={Suyash} alt="" />
-        <div className="userCharInfo">
+        <div className="userchatsInfo">
           <span>Suyash</span>
           <p>Hello</p>
         </div>
       </div>
-      <div className="userChat">
+      <div className="userchats">
         <img src={Suyash} alt="" />
-        <div className="userCharInfo">
+        <div className="userchatsInfo">
           <span>Suyash</span>
           <p>Hello</p>
         </div>
@@ -29,4 +29,4 @@ const Chats = () => {
   );
 };
 
-export default Chats;
+export default chats;
